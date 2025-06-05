@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project || Portofolio Fatchur Rochman</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/d23c3672e3.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">Fatchur Rochman</a>
+            </div>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang Saya</a></li>
+                <li><a href="skills.html">Keahlian</a></li>
+                <li><a href="projects.html" class="active">Hasil Karya</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container page-title" data-aos="fade-in">
+            <h1>Hasil Karya Saya</h1>
+            <p class="page-subtitle">Implementasi Keahlian dalam Proyek-Proyek Nyata dan Inovatif</p>
+        </section>
+
+        <section id="project-gallery" class="container section-padding">
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up">
+                    <img src="images/project_pajak.jpg" alt="Aplikasi Perpajakan"> 
+                    <div class="project-info">
+                        <h3>Aplikasi Perpajakan Digital</h3>
+                        <p class="project-tagline">Menyederhanakan Pelaporan Pajak dengan Teknologi</p>
+                        
+                        <p class="project-summary">
+                            Aplikasi ini dirancang untuk menyederhanakan proses pelaporan dan manajemen pajak bagi wajib pajak individu dan UMKM, menggantikan proses manual yang memakan waktu dengan solusi digital yang intuitif dan terintegrasi.
+                        </p>
+                        
+                        <h4>Peran Saya:</h4>
+                        <p>
+                            Sebagai Lead Mobile Developer, saya bertanggung jawab atas arsitektur aplikasi Flutter, pengembangan fitur inti, integrasi API, dan koordinasi dengan tim backend serta UI/UX designer.
+                        </p>
+
+                        <h4>Fitur Utama:</h4>
+                        <ul>
+                            <li>Pelaporan SPT Otomatis berbasis data input pengguna.</li>
+                            <li>Kalkulator PPh 21 dan PPN interaktif dengan regulasi terbaru.</li>
+                            <li>Notifikasi pengingat otomatis untuk tenggat waktu pajak.</li>
+                            <li>Enkripsi data end-to-end untuk keamanan maksimal informasi finansial.</li>
+                        </ul>
+
+                        <h4>Teknologi yang Digunakan:</h4>
+                        <p>
+                            Flutter (BloC untuk State Management, Dio), Java (Spring Boot untuk API), PostgreSQL, Firebase (Authentication, Cloud Functions), Git, Jira.
+                        </p>
+
+                        <h4>Tantangan & Solusi:</h4>
+                        <p>
+                            <strong>Tantangan:</strong> Mengintegrasikan regulasi pajak yang kompleks dan sering berubah ke dalam logika aplikasi secara dinamis. 
+                            <strong>Solusi:</strong> Merancang modul aturan bisnis yang fleksibel dan mudah diperbarui melalui konfigurasi server, meminimalkan kebutuhan update aplikasi di sisi klien.
+                        </p>
+
+                        <h4>Hasil & Dampak:</h4>
+                        <p>
+                            Berhasil mengurangi waktu pelaporan pajak rata-rata hingga 60% bagi pengguna awal, mendapatkan rating 4.5 di Play Store dalam 3 bulan pertama, dan meningkatkan kepatuhan pajak pengguna.
+                        </p>
+                        
+                        <div class="project-links">
+                            </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/project_investasi.jpg" alt="Aplikasi Investasi Saham">
+                    <div class="project-info">
+                        <h3>Aplikasi Investasi Pasar Saham</h3>
+                        <p class="project-tagline">Investasi Cerdas di Ujung Jari Anda</p>
+                        <p class="project-summary">
+                            Platform investasi saham real-time dengan fitur analisis pasar dan portofolio manajemen yang canggih, ditujukan untuk investor pemula hingga berpengalaman.
+                        </p>
+                        <h4>Peran Saya:</h4> <p></p>
+                        <h4>Fitur Utama:</h4> <ul><li></li><li></li></ul>
+                        <h4>Teknologi:</h4> <p></p>
+                        <h4>Tantangan & Solusi:</h4> <p></p>
+                        <h4>Hasil & Dampak:</h4> <p></p>
+                    </div>
+                </div>
+                
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> FatchurR. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

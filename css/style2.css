@@ -1,0 +1,254 @@
+        /* Basic Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: #4A4A4A;
+            background-color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3, h4 {
+            margin-bottom: 1rem;
+            color: #0D205E;
+            line-height: 1.3;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: #FF6F00;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #E65100;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            border-bottom: 1px solid #E0E0E0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        nav .logo a {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #0D205E;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            color: #333A45;
+            padding: 0.5rem 0.8rem;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            position: relative;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #FF6F00;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after,
+        nav ul li a.active::after {
+            width: 70%;
+        }
+
+        nav ul li a.active {
+            color: #0D205E;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #0D205E;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            background-color: #FF6F00;
+            color: #fff;
+            padding: 14px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            margin: 0.5rem;
+            box-shadow: 0 4px 15px rgba(255, 111, 0, 0.2);
+        }
+        .btn:hover {
+            background-color: #E65100;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 111, 0, 0.3);
+        }
+        .btn-secondary {
+            background-color: #F0F4F8;
+            color: #333A45;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .btn-secondary:hover {
+            background-color: #DCE4EC;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Styles for Coming Soon Page (sebelumnya 404) */
+        .coming-soon-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            /* Menggunakan flex-grow agar section mengisi sisa ruang di main */
+            flex-grow: 1; 
+            padding: 2rem;
+            /* Hapus margin-top dan min-height yang bergantung pada tinggi header/footer absolut */
+        }
+        main { /* Pastikan main juga bisa stretch */
+            flex-grow: 1;
+            display: flex; /* Agar coming-soon-section bisa stretch di dalamnya */
+        }
+
+        .coming-soon-icon {
+            margin-bottom: 2rem;
+            color: #FF6F00; /* Warna aksen oranye tema Anda */
+        }
+
+        .coming-soon-icon .fa-rocket,
+        .coming-soon-icon .fa-tools,
+        .coming-soon-icon .fa-cogs { /* Pastikan nama kelas ikon sesuai dengan yang Anda gunakan */
+            font-size: 4rem; /* Ukuran ikon */
+            animation: float-icon 3s ease-in-out infinite;
+        }
+
+        @keyframes float-icon {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .coming-soon-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #0D205E; /* Warna biru tua tema Anda */
+            margin-bottom: 1rem;
+        }
+
+        .coming-soon-message {
+            font-size: 1.2rem;
+            color: #4A4A4A;
+            max-width: 650px;
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+        }
+
+        .coming-soon-actions .btn {
+            margin: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0D205E;
+            color: #E0E0E0;
+            text-align: center;
+            padding: 2rem 0;
+            /* Hapus margin-top: auto; karena body sudah flex-direction: column */
+        }
+        footer p {
+            margin-bottom: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design for Nav */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 69px; /* Sesuaikan dengan tinggi header Anda */
+                left: 0;
+                background-color: #fff;
+                border-top: 1px solid #E0E0E0;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+            }
+            nav ul.show {
+                display: flex;
+            }
+            nav ul li {
+                margin: 0;
+                text-align: center;
+                width: 100%;
+            }
+            nav ul li a {
+                display: block;
+                padding: 1rem;
+                border-bottom: 1px solid #E0E0E0;
+            }
+            nav ul li a::after {
+                display: none;
+            }
+            nav ul li a:hover,
+            nav ul li a.active {
+                background-color: #F0F4F8;
+                color: #0D205E;
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }

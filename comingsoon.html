@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segera Hadir! | FatchurR</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">FatchurR</a> 
+            </div>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang Saya</a></li>
+                <li><a href="skills.html">Keahlian</a></li>
+                <li><a href="project.html">Hasil Karya</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="coming-soon-section" data-aos="fade-in">
+            <div class="coming-soon-icon" data-aos="zoom-in" data-aos-delay="50">
+                <i class="fas fa-rocket fa-4x"></i>
+            </div>
+            <h1 class="coming-soon-title" data-aos="fade-up" data-aos-delay="100">Segera Hadir!</h1>
+            <p class="coming-soon-message" data-aos="fade-up" data-aos-delay="200">
+                Fitur Keren Lagi Dibangun! Saya sedang bekerja keras untuk menghadirkan sesuatu yang baru dan menarik di sini. Mohon bersabar ya, akan segera rilis!
+            </p>
+            <div class="coming-soon-actions" data-aos="fade-up" data-aos-delay="300">
+                <a href="index.html" class="btn">Kembali ke Beranda</a>
+                <a href="project.html" class="btn btn-secondary">Lihat Karya Saya</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> FatchurR. All Rights Reserved.</p> 
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                duration: 800, 
+                once: true,    
+                offset: 80,    
+                easing: 'ease-in-out', 
+            });
+        }
+
+        const yearElement = document.getElementById('year');
+        if (yearElement) {
+            yearElement.textContent = new Date().getFullYear();
+        }
+
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navUl = document.querySelector('nav ul');
+
+        if (menuToggle && navUl) {
+            menuToggle.addEventListener('click', () => {
+                navUl.classList.toggle('show');
+                const icon = menuToggle.querySelector('i');
+                if (navUl.classList.contains('show')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
